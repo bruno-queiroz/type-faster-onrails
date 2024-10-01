@@ -52,14 +52,20 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "factory_bot_rails"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'rspec-rails'
 end
 
 gem "shakapacker", "= 7.2"
 
 gem "react_on_rails", "= 14.0"
+
+gem "devise", "~> 4.9"
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-google-oauth2'
