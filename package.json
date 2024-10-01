@@ -9,6 +9,7 @@
     "@babel/preset-typescript": "^7.24.7",
     "@babel/runtime": "7",
     "@rescript/core": "^1.6.0",
+    "@rescript/react": "^0.13.0",
     "@tanstack/react-query": "^5.51.21",
     "@types/babel__core": "7",
     "@types/webpack": "5",
