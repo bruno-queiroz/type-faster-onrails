@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { SpaRoutes } from "./routes";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { User } from "./services/api/config";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,11 +14,11 @@ const queryClient = new QueryClient({
   },
 });
 
-export const App = () => {
+export const App = ({user}: {user: User}) => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <SpaRoutes />
+        <SpaRoutes user={user}/>
       </BrowserRouter>
     </QueryClientProvider>
   );
