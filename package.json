@@ -8,6 +8,7 @@
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@babel/runtime": "7",
+    "@rescript/core": "^1.6.0",
     "@tanstack/react-query": "^5.51.21",
     "@types/babel__core": "7",
     "@types/webpack": "5",
@@ -25,6 +26,7 @@
     "react-icons": "^5.2.1",
     "react-on-rails": "14.0.0",
     "react-router-dom": "^6.26.0",
+    "rescript": "^11.1.4",
     "shakapacker": "7.2.0",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "5",
@@ -47,5 +49,10 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "react-refresh": "^0.14.2",
     "webpack-dev-server": "4"
+  },
+  "scripts": {
+    "res:build": "rescript",
+    "res:clean": "rescript clean",
+    "res:dev": "rescript -w"
   }
 }
