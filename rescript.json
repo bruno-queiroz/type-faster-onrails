@@ -9,6 +9,7 @@
     "in-source": true
   },
   "suffix": ".res.mjs",
+  "jsx": { "version": 4 },
   "bs-dependencies": [
     "@rescript/core",
     "@rescript/react"
