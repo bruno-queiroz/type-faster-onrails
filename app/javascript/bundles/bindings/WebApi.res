@@ -39,6 +39,8 @@ type event = {preventDefault: unit => unit, animationName: string, target: docum
 
 @new external dateFromInt: int => Js.Date.t = "Date"
 @new external dateFromJsDate: Js.Date.t => Js.Date.t = "Date"
+type date = {getTime: unit => int}
+@new external date: unit => date = "Date"
 
 @val external event: event = "event"
 
