@@ -26,7 +26,14 @@ type matchMedia = {matches: bool}
 
 type window = {location: location, matchMedia: string => matchMedia}
 
-type event = {preventDefault: unit => unit, animationName: string, target: documentElement}
+type nativeEvent = {inputType: string, data: option<string>}
+
+type event = {
+  preventDefault: unit => unit,
+  animationName: string,
+  target: documentElement,
+  nativeEvent: nativeEvent,
+}
 
 @val external document: document = "document"
 @send external toggle: string => unit = "toggle"
