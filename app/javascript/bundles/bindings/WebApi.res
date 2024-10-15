@@ -9,6 +9,9 @@ type documentElement = {
   id: string,
   addEventListener: (string, mouseEvent => unit) => unit,
   removeEventListener: (string, mouseEvent => unit) => unit,
+  value: string,
+  selectionStart: option<int>,
+  textContent: string,
 }
 
 type document = {
@@ -16,6 +19,7 @@ type document = {
   mutable value: string,
   focus: unit => unit,
   querySelector: string => option<documentElement>,
+  children: array<documentElement>,
 }
 
 type localStorage = {setItem: (string, string) => unit, getItem: string => option<string>}
