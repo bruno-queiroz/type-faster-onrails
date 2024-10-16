@@ -4,6 +4,11 @@ type eventElement = {id: string}
 
 type mouseEvent = {preventDefault: unit => unit, target: eventElement}
 
+type style = {
+  mutable color: string,
+  mutable backgroundColor: string,
+}
+
 type documentElement = {
   classList: classList,
   id: string,
@@ -12,6 +17,7 @@ type documentElement = {
   value: string,
   selectionStart: option<int>,
   textContent: string,
+  style: style,
 }
 
 type document = {
