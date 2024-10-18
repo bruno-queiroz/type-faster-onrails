@@ -7,6 +7,7 @@ type mouseEvent = {preventDefault: unit => unit, target: eventElement}
 type style = {
   mutable color: string,
   mutable backgroundColor: string,
+  mutable textDecoration: string,
 }
 
 type documentElement = {
