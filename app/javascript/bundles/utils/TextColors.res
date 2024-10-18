@@ -35,3 +35,20 @@ let update = (
   | _ => ()
   }
 }
+
+let clear = (~element: Nullable.t<WebApi.document>, ~color, ~bgColor) => {
+  switch element->Nullable.toOption {
+  | Some(element) =>
+    for i in 0 to element.children->Array.length {
+      let child = element.children[i]
+
+      switch child {
+      | Some(child) =>
+        child.style.color = color
+        child.style.backgroundColor = bgColor
+      | None => ()
+      }
+    }
+  | None => ()
+  }
+}
