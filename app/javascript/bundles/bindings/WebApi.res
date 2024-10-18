@@ -17,6 +17,8 @@ type documentElement = {
   removeEventListener: (string, mouseEvent => unit) => unit,
   value: string,
   selectionStart: option<int>,
+  selectionEnd: option<int>,
+  childElementCount: int,
   textContent: string,
   style: style,
 }
