@@ -8,6 +8,9 @@ type style = {
   mutable color: string,
   mutable backgroundColor: string,
   mutable textDecoration: string,
+  mutable position: string,
+  mutable zIndex: string,
+  mutable left: string,
 }
 
 type documentElement = {
@@ -19,7 +22,7 @@ type documentElement = {
   selectionStart: option<int>,
   selectionEnd: option<int>,
   childElementCount: int,
-  textContent: string,
+  mutable textContent: string,
   style: style,
 }
 
@@ -28,6 +31,7 @@ type document = {
   mutable value: string,
   focus: unit => unit,
   querySelector: string => option<documentElement>,
+  createElement: string => documentElement,
   children: array<documentElement>,
 }
 
