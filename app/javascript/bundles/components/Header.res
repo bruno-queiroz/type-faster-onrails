@@ -15,8 +15,8 @@ let make = (~user: Nullable.t<Types.user>) => {
       </a>
       <div className="w-[45px] h-[45px] rounded-full relative">
         <img src={image} alt="user profile picture" className="rounded-full" />
-        <UserMenu>
-          <UserMenuHeader user={user} />
+        <UserMenu user>
+          <UserMenuHeader user />
         </UserMenu>
       </div>
     </div>
